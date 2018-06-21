@@ -8,25 +8,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.config.LeiProperties;
-import com.example.demo.model.User;
 
 @RestController
 public class HelloWorldController {
 	@Value("${com.lei.title}")
 	String ti;
 	
-	List<User> userList = new ArrayList<User>();
+//	List<User> userList = new ArrayList<User>();
 
 	@GetMapping("/hello")
 	public String sayHello() {
 		return "Hello World.";
 	}
 	
-	@GetMapping("/users")
-	public List<User> getUsers() {
-		userList.add(new User("lei", 22, "male")) ;
-		return userList;
-	}
+//	@GetMapping("/users")
+//	public List<User> getUsers() {
+//		userList.add(new User("aa1", "aa@126.com", "aa", "aa123456","2018.1.1"));
+//		return userList;
+//	}
 
 	@GetMapping("/lp")
 	public String getLeiPros() {
